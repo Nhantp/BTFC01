@@ -1,6 +1,5 @@
-package FC_01.employee;
+package FC_01.NV;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Employee implements Comparable<Employee>  {
@@ -15,6 +14,8 @@ public class Employee implements Comparable<Employee>  {
         this.name = name;
         this.salary = salary;
     }
+
+
 
     public String getName() {
         return name;

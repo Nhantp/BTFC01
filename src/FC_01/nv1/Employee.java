@@ -1,6 +1,6 @@
-package FC_01.Test.employee;
+package FC_01.nv1;
 
-public class Employee extends Person {
+public class Employee extends Person{
     private double salary;
 
     public Employee(String name, int age, String address, double salary) {
@@ -21,8 +21,7 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return super.toString() +
-                ", salary=" + salary;
+        return super.toString()+
+                "salary=" + salary;
     }
-
 }

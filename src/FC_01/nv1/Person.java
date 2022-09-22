@@ -1,4 +1,4 @@
-package FC_01.Test.employee;
+package FC_01.nv1;
 
 public class Person
 {

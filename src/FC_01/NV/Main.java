@@ -1,4 +1,4 @@
-package FC_01.employee;
+package FC_01.NV;
 
 import java.util.Scanner;
 
