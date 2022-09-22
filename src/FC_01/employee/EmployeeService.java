@@ -48,17 +48,20 @@ public class EmployeeService {
             System.out.println("2.Hien thi");
             System.out.println("3.Sap xep ten:");
             System.out.println("4.Sap xep luong.");
+            System.out.println("5.Quay lai");
             System.out.println("Nhap vao lua chon.");
             int check=Integer.parseInt(scanner.nextLine());
             switch (check){
                 case 1:add();
-                break;
+                    break;
                 case 2: display();
-                break;
+                    break;
                 case 3: sortName();
-                break;
+                    break;
                 case 4:sortSalary();
-                break;
+                    break;
+                case 5:
+                    return;
             }
         }while (true);
     }

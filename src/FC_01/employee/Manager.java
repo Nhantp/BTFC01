@@ -56,8 +56,7 @@ public class Manager extends Employee {
     @Override
     public String toString() {
         return super.toString()+
-                "Van phong='" + office + '\'' +
-                ",phu cap=" + allowance +
-                '}';
+                ", Van phong='" + office + '\'' +
+                ",Phu cap=" + allowance;
     }
 }
