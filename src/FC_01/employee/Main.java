@@ -1,4 +1,4 @@
-package BTDTU.FC_01.employee;
+package FC_01.employee;
 
 import java.util.Scanner;
 

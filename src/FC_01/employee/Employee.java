@@ -1,12 +1,9 @@
-package BTDTU.FC_01.employee;
+package FC_01.employee;
 
-import javax.sound.midi.Soundbank;
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.List;
+import java.util.Collections;
 import java.util.Scanner;
 
-public class Employee {
+public class Employee implements Comparable<Employee>  {
     protected String name;
     protected double salary;
     protected Scanner scanner=new Scanner(System.in);
@@ -47,7 +44,13 @@ public class Employee {
     public String toString() {
         return "Employee{" +
                 "name='" + name + '\'' +
-                ", salary=" + salary +
-                '}';
+                ", salary=" + salary;
     }
+    @Override
+    public int compareTo(Employee o) {
+        return this.name.compareTo(o.name);
+
+
+    }
+
 }

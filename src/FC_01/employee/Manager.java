@@ -1,10 +1,10 @@
-package BTDTU.FC_01.employee;
+package FC_01.employee;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Manager extends Employee{
+public class Manager extends Employee {
     private String office;
     private double allowance;
     private Scanner scanner=new Scanner(System.in);
@@ -56,8 +56,8 @@ public class Manager extends Employee{
     @Override
     public String toString() {
         return super.toString()+
-                "office='" + office + '\'' +
-                ", allowance=" + allowance +
+                "Van phong='" + office + '\'' +
+                ",phu cap=" + allowance +
                 '}';
     }
 }
