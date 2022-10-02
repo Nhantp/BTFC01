@@ -6,19 +6,23 @@ public class ManagerService {
     Manager manager = new Manager();
     public static List<Manager> managerList = new ArrayList<>();
     Scanner scanner=new Scanner(System.in);
-    static {
-        managerList.add(new Manager("re",3,"fe",6));
-        managerList.add(new Manager("fd",54,"fe",63));
-        managerList.add(new Manager("htr",64,"fe",4));
-        managerList.add(new Manager("dsvd",645,"fe",77));
-        managerList.add(new Manager("hd",37,"fe",53));
-        managerList.add(new Manager("fsw",98,"fe",65));
-    }
+//    static {
+//        managerList.add(new Manager("re",3,"fe",6));
+//        managerList.add(new Manager("fd",54,"fe",63));
+//        managerList.add(new Manager("htr",64,"fe",4));
+//        managerList.add(new Manager("dsvd",645,"fe",77));
+//        managerList.add(new Manager("hd",37,"fe",53));
+//        managerList.add(new Manager("fsw",98,"fe",65));
+//    }
 
     public void add() {
-        manager.input();
-        managerList.add(manager);
-        manager.setSalary(manager.getSalary() * 1500 + manager.getAllowance());
+        System.out.println("Nhap vao so luong:");
+        int size=Integer.parseInt(scanner.nextLine());
+        for (int i=0; i<size; i++) {
+            manager.input();
+            managerList.add(manager);
+            manager.setSalary(manager.getSalary() * 1500 + manager.getAllowance());
+        }
     }
 
     public void display() {
