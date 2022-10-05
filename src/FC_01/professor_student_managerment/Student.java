@@ -4,7 +4,7 @@ import com.sun.scenario.effect.impl.sw.java.JSWColorAdjustPeer;
 
 import java.util.Scanner;
 
-public class Student extends Person{
+public class Student extends Person {
     private String degreeProgram;
     private int yearOfGraduation;
 
@@ -32,13 +32,14 @@ public class Student extends Person{
     public void setYearOfGraduation(int yearOfGraduation) {
         this.yearOfGraduation = yearOfGraduation;
     }
-    public void inputStudent(){
-        Scanner scanner=new Scanner(System.in);
+
+    public void inputStudent() {
+        Scanner scanner = new Scanner(System.in);
         super.input();
         System.out.println("Nhap vao chuong trinh hoc: ");
-        this.degreeProgram= scanner.nextLine();
+        this.degreeProgram = scanner.nextLine();
         System.out.println("Nhap vao nam tot nghiep: ");
-        this.yearOfGraduation=Integer.parseInt(scanner.nextLine());
+        this.yearOfGraduation = Integer.parseInt(scanner.nextLine());
     }
 
     @Override
@@ -89,7 +90,7 @@ public class Student extends Person{
                 "code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", rank=" + rank +
-                ", description: "+description()+
+                ", description: " + description() +
                 ", degreeProgram='" + degreeProgram + '\'' +
                 ", yearOfGraduation=" + yearOfGraduation +
                 '}';

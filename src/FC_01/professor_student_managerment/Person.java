@@ -36,14 +36,24 @@ public abstract class Person {
         System.out.println("Employee name:" + name);
         System.out.println("Rank:" + rank);
     }
-    public void input(){
-        Scanner scanner=new Scanner(System.in);
+
+    public void input() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap vao ma: ");
-        this.code=scanner.nextLine();
+        this.code = scanner.nextLine();
         System.out.println("Nhap vao ten: ");
-        this.name=scanner.nextLine();
+        this.name = scanner.nextLine();
         System.out.println("Nhap vao thu hang: ");
-        this.rank=Integer.parseInt(scanner.nextLine());
+        this.rank = Integer.parseInt(scanner.nextLine());
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", rank=" + rank +
+                '}';
     }
 }
 

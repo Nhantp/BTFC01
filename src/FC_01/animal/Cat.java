@@ -22,8 +22,9 @@ public class Cat extends Animal {
 
     @Override
     public void intro() {
-        System.out.println("Toi la meo ten: "+this.name);
+        System.out.println("Meo meo");
     }
+
 
     public void inputCat() {
         Scanner scanner=new Scanner(System.in);

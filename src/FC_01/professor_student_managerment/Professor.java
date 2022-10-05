@@ -22,16 +22,20 @@ public class Professor extends Person {
     public void setDepartment(String department) {
         this.department = department;
     }
-    public void displayProfessor(){
+
+    public void displayProfessor() {
         display();
     }
-    public void inputProfessor(){
-        Scanner scanner=new Scanner(System.in);
+
+    public void inputProfessor() {
+        Scanner scanner = new Scanner(System.in);
         super.input();
         System.out.println("Nhap vao phong ban: ");
-        this.department= scanner.nextLine();
+        this.department = scanner.nextLine();
     }
+
     String desProfessor = "";
+
     @Override
     public String description() {
         switch (rank) {
@@ -73,15 +77,8 @@ public class Professor extends Person {
                 "code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 ", rank=" + rank +
-                ", description: "+description()+
-                ", department='" + department + '\''+
+                ", description: " + description() +
+                ", department='" + department + '\'' +
                 '}';
     }
-
-//    public static void main(String[] args) {
-//        Professor professor=new Professor();
-//        professor.inputProfessor();
-//        professor.displayProfessor();
-//    }
-
 }
