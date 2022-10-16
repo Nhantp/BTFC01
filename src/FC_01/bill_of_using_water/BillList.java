@@ -7,16 +7,8 @@ public class BillList {
     private static List<Bill> billList = new ArrayList<>();
     private int numberBill;
 
-    //Resident Business Organization Otherwise
-    static {
-        billList.add(new Bill(1, "Resident", 3, 7));
-        billList.add(new Bill(2, "Business", 3, 7));
-        billList.add(new Bill(3, "Resident", 3, 10));
-        billList.add(new Bill(4, "Business", 3, 7));
-        billList.add(new Bill(4, "Business", 3, 5));
-    }
-
     public void add() {
+        Bill bill=new Bill();
         bill.input();
         billList.add(bill);
     }
@@ -32,7 +24,6 @@ public class BillList {
         System.out.println("Tong tien hoa don " + customerType + ": " + sum);
     }
 
-    //Resident Business Organization Otherwise
     public void display() {
         for (Bill bill : billList) {
             System.out.println(bill);

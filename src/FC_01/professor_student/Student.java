@@ -1,20 +1,19 @@
-package FC_01.professor_student_managerment;
-
-import com.sun.scenario.effect.impl.sw.java.JSWColorAdjustPeer;
+package FC_01.professor_student;
 
 import java.util.Scanner;
 
 public class Student extends Person {
+    Scanner scanner=new Scanner(System.in);
     private String degreeProgram;
     private int yearOfGraduation;
+
+    public Student() {
+    }
 
     public Student(String code, String name, int rank, String degreeProgram, int yearOfGraduation) {
         super(code, name, rank);
         this.degreeProgram = degreeProgram;
         this.yearOfGraduation = yearOfGraduation;
-    }
-
-    public Student() {
     }
 
     public String getDegreeProgram() {
@@ -32,20 +31,19 @@ public class Student extends Person {
     public void setYearOfGraduation(int yearOfGraduation) {
         this.yearOfGraduation = yearOfGraduation;
     }
-
-    public void inputStudent() {
-        Scanner scanner = new Scanner(System.in);
-        super.input();
-        System.out.println("Nhap vao chuong trinh hoc: ");
-        this.degreeProgram = scanner.nextLine();
+    public void info(){
+        super.info();
+        System.out.println("Nhap vao chuong trinh tot nghiep: ");
+        this.degreeProgram=scanner.nextLine();
         System.out.println("Nhap vao nam tot nghiep: ");
-        this.yearOfGraduation = Integer .parseInt(scanner.nextLine());
+        this.yearOfGraduation=Integer.parseInt(scanner.nextLine());
+    }
+    public void display(){
+        super.display();
+        System.out.println("Chuong trinh tot nghiep: "+degreeProgram);
+        System.out.println("Nam tot nghiep: "+yearOfGraduation);
     }
 
-    @Override
-    public void display() {
-        super.display();
-    }
 
     @Override
     public String description() {
@@ -83,16 +81,9 @@ public class Student extends Person {
         return desStudent;
     }
 
-
     @Override
-    public String toString() {
-        return "Student{" +
-                "code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", rank=" + rank +
-                ", description: " + description() +
-                ", degreeProgram='" + degreeProgram + '\'' +
-                ", yearOfGraduation=" + yearOfGraduation +
-                '}';
+    public int getType() {
+        return 2;
     }
+
 }

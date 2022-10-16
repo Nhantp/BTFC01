@@ -1,18 +1,17 @@
-package FC_01.professor_student_managerment;
-
-import com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
+package FC_01.professor_student;
 
 import java.util.Scanner;
 
-public class Professor extends Person {
+public class Professor extends Person{
+    Scanner scanner=new Scanner(System.in);
     private String department;
+
+    public Professor() {
+    }
 
     public Professor(String code, String name, int rank, String department) {
         super(code, name, rank);
         this.department = department;
-    }
-
-    public Professor() {
     }
 
     public String getDepartment() {
@@ -22,23 +21,20 @@ public class Professor extends Person {
     public void setDepartment(String department) {
         this.department = department;
     }
-
-    public void displayProfessor() {
-        display();
+    public void info(){
+        super.info();
+        System.out.println("Nhap vao khoa: ");
+        this.department=scanner.nextLine();
     }
-
-    public void inputProfessor() {
-        Scanner scanner = new Scanner(System.in);
-        super.input();
-        System.out.println("Nhap vao phong ban: ");
-        this.department = scanner.nextLine();
+    public void display(){
+        super.display();
+        System.out.println("Phong ban: "+department);
     }
-
-    String desProfessor = "";
 
     @Override
     public String description() {
-        switch (getRank()) {
+        String desProfessor="";
+        switch (rank) {
             case 0: {
                 desProfessor = "None";
                 break;
@@ -71,14 +67,9 @@ public class Professor extends Person {
         return desProfessor;
     }
 
+
     @Override
-    public String toString() {
-        return "Professor{" +
-                "code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                ", rank=" + rank +
-                ", description: " + description() +
-                ", department='" + department + '\'' +
-                '}';
+    public int getType() {
+        return 1;
     }
 }

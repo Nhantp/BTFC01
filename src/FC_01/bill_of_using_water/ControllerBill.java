@@ -6,9 +6,12 @@ public class ControllerBill {
     //Resident Business Organization Otherwise
     public static void main(String[] args) {
         BillList billList1 = new BillList();
-        Bill bill = new Bill();
         Scanner scanner = new Scanner(System.in);
-//        billList1.add();
+        System.out.println("Nhap vao so luong hoa don: ");
+        int size=Integer.parseInt(scanner.nextLine());
+        for (int i=0; i<size; i++){
+            billList1.add();
+        }
         billList1.display();
 //        System.out.println("Nhap vao loai khach hang can tinh tong: ");
 //        String customerType = scanner.nextLine();

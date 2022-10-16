@@ -14,17 +14,17 @@ public class Controller {
         Student student = new Student();
         Professor professor = new Professor();
         PersonList personList = new PersonList();
-        System.out.println("Them hoc sinh: ");
-        personList.addStudent(student);
-        personList.addProfessor(professor);
-        System.out.println("Them giang vien: ");
+//        System.out.println("Them hoc sinh: ");
+//        personList.addStudent(student);
+//        personList.addProfessor(professor);
+//        System.out.println("Them giang vien: ");
         personList.displayAll();
         personList.average();
         personList.maxRank(person);
-        System.out.println("Nhap vao nguoi co id can xoa:");
-        String code = scanner.nextLine();
-        personList.Remove(code, person);
-        personList.displayAll();
+//        System.out.println("Nhap vao nguoi co id can xoa:");
+//        String code = scanner.nextLine();
+//        personList.Remove(code, person);
+//        personList.displayAll();
 
     }
 }

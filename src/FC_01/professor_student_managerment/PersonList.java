@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonList {
-    Professor professor=new Professor();
     static List<Person> personList=new ArrayList<>();
     static {
         personList.add(new Professor("1","a",1,"na"));
         personList.add(new Professor("4","d",5,"na"));
-        personList.add(new Professor("2","b",2,"wer"));
+        personList.add(new Professor("2","b",6,"wer"));
         personList.add(new Professor("3","a",4,"nwer"));
         personList.add(new Student("5","r",2,"LA",2021));
         personList.add(new Student("8","r",6,"LA",2021));
@@ -48,7 +47,7 @@ public class PersonList {
     }
     public void maxRank(Person person1){
         for (Person person:personList){
-            if(max< person.rank){
+            if(max<= person.rank){
                 max= person.rank;
                 person1=person;
             }
