@@ -3,9 +3,6 @@ package FC_01.hinh;
 import java.util.Scanner;
 
 public class HinhTron extends HinhHoc{
-    public HinhTron(int id, double radian) {
-        super(id, radian);
-    }
 
     @Override
     public void info() {

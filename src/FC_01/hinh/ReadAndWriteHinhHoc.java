@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ReadAndWriteHinhHoc {
     public ArrayList<HinhHoc> readFile(String filePath){
@@ -21,8 +20,6 @@ public class ReadAndWriteHinhHoc {
                 str=line.split(",");
                 int id= Integer.parseInt(str[0]);
                 double radian= Double.parseDouble(str[1]);
-                HinhHoc hinhHoc=new HinhTron(id,radian);
-                hinhHocArrayList.add(hinhHoc);
 
             }
         }catch (FileNotFoundException e) {
