@@ -1,7 +1,5 @@
 package BAI_THI.hinh;
 
-import BAI_THI.hinh.HinhHoc;
-
 public class HinhChuNhat extends HinhHoc {
 
     @Override

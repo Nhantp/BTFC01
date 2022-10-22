@@ -1,68 +1,74 @@
 package BAI_THI.professor_student_managerment;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class PersonList {
-    static List<Person> personList=new ArrayList<>();
-    static {
-        personList.add(new Professor("1","a",1,"na"));
-        personList.add(new Professor("4","d",5,"na"));
-        personList.add(new Professor("2","b",6,"wer"));
-        personList.add(new Professor("3","a",4,"nwer"));
-        personList.add(new Student("5","r",2,"LA",2021));
-        personList.add(new Student("8","r",6,"LA",2021));
-        personList.add(new Student("7","r",3,"LA",2021));
+    ArrayList<Person>personArrayList=new ArrayList<>();
+    Scanner scanner=new Scanner(System.in);
+    public void add(){
+        System.out.println("Nhap vao so luong: ");
+        int size=Integer.parseInt(scanner.nextLine());
+        for (int i=0; i<size; i++){
+            System.out.println("Giao su(p), hoc sinh(s), exit(e)");
+            System.out.println("Nhap vao lua chon: ");
+            String choice=scanner.nextLine();
+            if(choice.equals("p")){
+                Professor professor=new Professor();
+                professor.inputProfessor();
+                personArrayList.add(professor);
+            }
+            else if(choice.equals("s")){
+                Student student=new Student();
+                student.inputStudent();
+                personArrayList.add(student);
+            }
+            else {
+                break;
+            }
+        }
     }
-    public void addStudent(Student student){
-        student.inputStudent();
-        personList.add(student);
-    }
-    public void addProfessor(Professor professor){
-        professor.inputProfessor();
-        personList.add(professor);
-    }
-    public void displayAll(){
-        for(Person person:personList){
+    public void display(){
+        for (Person person:personArrayList){
             System.out.println(person);
-
         }
     }
     public void average(){
         int sum=0;
         int index=0;
-        for(Person person:personList){
+        for(Person person:personArrayList){
              sum += person.rank;
              index++;
         }
         System.out.println("Average Rank: "+sum/index);
     }
-    int max=0;
-    public void takeHead(){
-        for(Person person:personList){
+    public void maxRank(){
+        Person personObj=null;
+        int max=0;
+        for(Person person:personArrayList){
             max= person.getRank();
             break;
         }
-        System.out.println(max);
-    }
-    public void maxRank(Person person1){
-        for (Person person:personList){
-            if(max<= person.rank){
-                max= person.rank;
-                person1=person;
+        for (Person person:personArrayList){
+            if(max<= person.getRank()){
+                max= person.getRank();
+                personObj=person;
             }
         }
-        System.out.println("Nguoi co rank cao nhat: "+person1);
+        System.out.println("Nguoi co rank cao nhat: "+personObj);
     }
-    public void Remove(String code,Person person1){
-        for (Person person:personList){
-            if(person.getCode().equals(code)){
-                person1=person;
+    public void Remove(){
+        Person personObj=null;
+        System.out.println("Nhap vao nguoi co id can xoa: ");
+        int code=Integer.parseInt(scanner.nextLine());
+        for (Person person:personArrayList){
+            if(person.getCode()==code){
+                personObj=person;
             }
         }
-        int index=personList.indexOf(person1);
-        if(index!=-1){
-            personList.remove(index);
+        if(personObj!=null){
+            personArrayList.remove(personObj);
+            System.out.println("Success delete");
         }else {
             System.err.println("not found.");
         }

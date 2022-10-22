@@ -6,7 +6,7 @@ public class Student extends Person {
     private String degreeProgram;
     private int yearOfGraduation;
 
-    public Student(String code, String name, int rank, String degreeProgram, int yearOfGraduation) {
+    public Student(int code, String name, int rank, String degreeProgram, int yearOfGraduation) {
         super(code, name, rank);
         this.degreeProgram = degreeProgram;
         this.yearOfGraduation = yearOfGraduation;

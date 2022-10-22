@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Professor extends Person {
     private String department;
 
-    public Professor(String code, String name, int rank, String department) {
+    public Professor(int code, String name, int rank, String department) {
         super(code, name, rank);
         this.department = department;
     }

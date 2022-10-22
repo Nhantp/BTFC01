@@ -4,11 +4,11 @@ package BAI_THI.professor_student_managerment;
 import java.util.Scanner;
 
 public abstract class Person {
-    protected String code;
+    protected int code;
     protected String name;
     protected int rank;
 
-    public Person(String code, String name, int rank) {
+    public Person(int code, String name, int rank) {
         this.code = code;
         this.name = name;
         this.rank = rank;
@@ -17,7 +17,7 @@ public abstract class Person {
     protected Person() {
     }
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
@@ -40,7 +40,7 @@ public abstract class Person {
     public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap vao ma: ");
-        this.code = scanner.nextLine();
+        this.code =Integer.parseInt(scanner.nextLine());
         System.out.println("Nhap vao ten: ");
         this.name = scanner.nextLine();
         System.out.println("Nhap vao thu hang: ");
