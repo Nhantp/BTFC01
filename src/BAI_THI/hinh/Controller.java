@@ -1,4 +1,6 @@
-package FC_01.hinh;
+package BAI_THI.hinh;
+
+import BAI_THI.hinh.ListHinh;
 
 public class Controller {
     public static void main(String[] args) {

@@ -1,6 +1,4 @@
-package FC_01.professor_student_managerment;
-
-import com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
+package BAI_THI.professor_student_managerment;
 
 import java.util.Scanner;
 

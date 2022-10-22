@@ -1,4 +1,4 @@
-package FC_01.professor_student_managerment;
+package BAI_THI.professor_student_managerment;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,4 @@
-package FC_01.professor_student_managerment;
-
-import com.sun.scenario.effect.impl.sw.java.JSWColorAdjustPeer;
+package BAI_THI.professor_student_managerment;
 
 import java.util.Scanner;
 
